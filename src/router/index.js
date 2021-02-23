@@ -24,9 +24,14 @@ export default new Router({
       ]
     },
     {       //  单路由引入的组件 打开新的路由 会在HTML中展示全新的one组件
-      path: '/one',
+      path: '/one',  // 路径
       name: 'one',
-      component: () => import('@/components/one'),
+      component: () => import('@/components/one'), // 这个路由要展示的组件
+    },
+    {
+      path: '/model',
+      name: 'model',
+      component: () => import('@/components/model/model'),
     }
   ]
 })
