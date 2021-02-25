@@ -1,4 +1,5 @@
 <template>
+  <!-- 子组件 -->
   <div class="child">
     <div>model的子组件:{{ inputName }}</div>
     <!-- （子传父）  -->

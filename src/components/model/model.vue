@@ -1,4 +1,5 @@
 <template>
+  <!-- 父组件 -->
   <div class="model">
     model
     <input type="text" v-model="name" />
@@ -23,8 +24,7 @@ export default {
       childName: "",
     };
   },
-  mounted() {
-  },
+  mounted() {},
   methods: {
     childByValue: function (childValue) {
       // childValue就是子组件传过来的值
