@@ -32,6 +32,11 @@ export default new Router({
       path: '/model',
       name: 'model',
       component: () => import('@/components/model/model'),
-    }
+    },
+    {
+      path: '/fan',
+      name: 'fan',
+      component: () => import('@/components/fan/fan'),
+    },
   ]
 })
