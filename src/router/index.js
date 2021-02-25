@@ -8,7 +8,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      redirect: '/about',
+      redirect: '/fan',
       component: () => import('@/components/home'),
       children: [  //  子路由引入的组件会显示在home组件的router-view中
         {
@@ -54,6 +54,11 @@ export default new Router({
           component: ()=>import('@/components/fan/user1')
         }
       ]
+    },
+    {
+      path: '/wu',
+      name: 'wu',
+      component: () => import('@/components/wu/wu'),
     },
   ]
 })
