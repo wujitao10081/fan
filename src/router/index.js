@@ -37,6 +37,23 @@ export default new Router({
       path: '/fan',
       name: 'fan',
       component: () => import('@/components/fan/fan'),
+      children:[
+        {
+          path:'/home1',
+          name:'home1',
+          component: ()=>import('@/components/fan/home1')
+        },
+        {
+          path:'/about1',
+          name:'about1',
+          component: ()=>import('@/components/fan/about1')
+        },
+        {
+          path:'/user1',
+          name:'user1',
+          component: ()=>import('@/components/fan/user1')
+        }
+      ]
     },
   ]
 })
