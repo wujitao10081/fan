@@ -38,5 +38,10 @@ export default new Router({
       name: 'fan',
       component: () => import('@/components/fan/fan'),
     },
+    {
+      path: '/wu',
+      name: 'wu',
+      component: () => import('@/components/wu/wu'),
+    },
   ]
 })
