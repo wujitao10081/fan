@@ -5,10 +5,8 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import axios from "axios"
-import VueAxios from "vue-axios"
 
-Vue.use(ElementUI,VueAxios,axios);
+Vue.use(ElementUI);
 
 import axios from 'axios'   // 引入 axios 从 ‘axios’
 Vue.prototype.axios = axios  // 引入 axios 并绑定在vue的原型上 通过this.axios调用
