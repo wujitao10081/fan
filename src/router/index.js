@@ -60,5 +60,10 @@ export default new Router({
       name: 'wu',
       component: () => import('@/components/wu/wu'),
     },
+    {
+      path: '/me',
+      name: 'me',
+      component: () => import('@/components/wu/me'),
+    },
   ]
 })
