@@ -10,6 +10,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
+const express = require('express')
+const app = express()
+const appData = require('../src/assets/json/test9.json') // 加载本地json文件
+const seller = appData[0].Actors // 获取对应本地数据
+const goods = appData[0].goods
+const titleList = appData[0].titleList
+const apiRoutes = express.Router()
+app.use('/api', apiRoutes)
+
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
@@ -42,7 +51,27 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
-    }
+    },
+      //然后找到devSeerver，在里面添加
+      before(app) {
+        app.get('/api/seller', (reg, res) => {
+          res.json({
+            data: seller
+          }) // 接口返回json数据，上面配置的数据seller就复制给data请求后调用
+        }),
+          app.get('/api/goods', (reg, res) => {
+            res.json({
+              errno: 0,
+              data: goods
+            }) // 接口返回json数据，上面配置的数据goods就复制给data请求后调用
+          }),
+          app.get('/api/titleList', (reg, res) => {
+            res.json({
+              errno: 0,
+              data: titleList
+            }) // 接口返回json数据，上面配置的数据ratings就复制给data请求后调用
+          })
+      }
   },
   plugins: [
     new webpack.DefinePlugin({
