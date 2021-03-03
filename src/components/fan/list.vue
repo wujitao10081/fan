@@ -9,11 +9,11 @@
                 <th>{{this.titleList.level}}</th>
             </tr>
             <tr v-for="(itemSeller,index) in seller" :key="index">
-                <td >{{itemSeller.event_id}}</td>
-                <td >{{itemSeller.title}}</td>
-                <td >{{itemSeller.count}}</td>
-                <td >{{itemSeller.time | formatDate}}</td>
-                <td >{{itemSeller.level}}</td>
+                <td>{{itemSeller.event_id}}</td>
+                <td>{{itemSeller.title}}</td>
+                <td>{{itemSeller.count}}</td>
+                <td>{{itemSeller.time | formatDate}}</td>
+                <td :style="{background:active}" ref="styleBack">{{itemSeller.level}}</td>
             </tr>
         </table>
     </div>
@@ -34,26 +34,47 @@ export default {
     data() {
         return {
            titleList:"",
-           seller:''
+           seller:'',
+           active:['red','blue','green']
+
         }
     },
+    
     mounted() {
         this.axios.get("/api/titleList").then((response) => {
             console.log(response.data.data.data)
             this.titleList = response.data.data.data     
 })
         this.axios.get("/api/seller").then((res) => {
-            console.log(res.data.data);
-            this.seller = res.data.data 
+            console.log(res.data.data);  
+            this.seller = res.data.data
+            
+
+
+
+
             this.seller.sort((a,b)=>{
                 return a.event_id-b.event_id
-            })          
+            }) 
+        
      } )     
         
- },     
+ },  
+    updated(){
+        for (let i = 0; i < this.seller.length; i++) {
+                console.log(this.seller[i].level);
+                console.log(this.$refs.styleBack);
+                if (this.seller[i].level === 'low') {
+                  this.$refs.styleBack.style = 'background:red'  
+                } else {
+                    
+                }
+                
+            }
+    },   
     filters:{    
-      formatDate: function () {
-        return moment().format('YYYY-MM-DD')
+      formatDate: function (x) {
+        return moment(x*1000).format('YYYY-MM-DD')
       }
     }
 }
