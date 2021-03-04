@@ -43,12 +43,12 @@ export default {
     // console.log(this.name); // 通过this 直接读取data中的数据
     // console.log(this.gitNum); // 不加（）直接读出计算属性的结果
     // var t = new Date();
-    // this.axios({
-    //   url: "/api/chartList",
-    //   method: "get",
-    // }).then(function (data) {
-    //   console.log(data);
-    // });
+    this.axios({
+      url: "/api/chartList",// tableList
+      method: "get",
+    }).then(function (data) {
+      console.log(data.data.data.objArray);
+    });
 
    
   },
