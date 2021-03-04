@@ -23,6 +23,7 @@
         {{ item }}
       </li>
     </ul>
+
   </div>
 </template>
 
@@ -34,15 +35,25 @@ export default {
       name: "wu", //基础模板
       code: true, // watch
       listArr: ["html", "css", "javaScript", "vue", "element"],
+     
     };
   },
   mounted() {
     var _this = this;
-    // 钩子函数
-    console.log(this.name); // 通过this 直接读取data中的数据
-    console.log(this.gitNum); // 不加（）直接读出计算属性的结果
+    // console.log(this.name); // 通过this 直接读取data中的数据
+    // console.log(this.gitNum); // 不加（）直接读出计算属性的结果
+    // var t = new Date();
+    // this.axios({
+    //   url: "/api/chartList",
+    //   method: "get",
+    // }).then(function (data) {
+    //   console.log(data);
+    // });
+
+   
   },
   methods: {
+ 
     //方法（事件）
     btn(val) {
       alert("点击事件" + val);

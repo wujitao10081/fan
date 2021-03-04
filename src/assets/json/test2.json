@@ -1,0 +1,886 @@
+{
+   
+    "title":"详情-chart",
+    "objArray": [
+       {
+          "class": "lower",
+          "age": 4,
+          "min_position": 4,
+          "has_more_items": true,
+          "items_html": "Bike",
+          "new_latent_count": 9,
+          "detail": {
+             "detail_title": "Bike",
+             "detail_nale": "Bus",
+             "detail_num": 5,
+             "detail_count": 5,
+             "numericalArray": [
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 45
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 54
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 20
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 13
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 32
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 55
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 5
+                }
+             ]
+          }
+       },
+       {
+          "class": "upper",
+          "age": 8,
+          "min_position": 4,
+          "has_more_items": true,
+          "items_html": "Car",
+          "new_latent_count": 4,
+          "detail": {
+             "detail_title": "Car",
+             "detail_nale": "Car",
+             "detail_num": 7,
+             "detail_count": 6,
+             "numericalArray": [
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 64
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 85
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 32
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 16
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 16
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 40
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 32
+                }
+             ]
+          }
+       },
+       {
+          "class": "lower",
+          "age": 9,
+          "min_position": 4,
+          "has_more_items": false,
+          "items_html": "Bike",
+          "new_latent_count": 2,
+          "detail": {
+             "detail_title": "Bus",
+             "detail_nale": "Bike",
+             "detail_num": 2,
+             "detail_count": 3,
+             "numericalArray": [
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 78
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 12
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 79
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 61
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 58
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 19
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 17
+                }
+             ]
+          }
+       },
+       {
+          "class": "upper",
+          "age": 2,
+          "min_position": 9,
+          "has_more_items": false,
+          "items_html": "Bus",
+          "new_latent_count": 6,
+          "detail": {
+             "detail_title": "Car",
+             "detail_nale": "Bike",
+             "detail_num": 1,
+             "detail_count": 9,
+             "numericalArray": [
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 21
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 72
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 42
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 13
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 8
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 58
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 45
+                }
+             ]
+          }
+       },
+       {
+          "class": "upper",
+          "age": 7,
+          "min_position": 5,
+          "has_more_items": true,
+          "items_html": "Car",
+          "new_latent_count": 0,
+          "detail": {
+             "detail_title": "Car",
+             "detail_nale": "Car",
+             "detail_num": 9,
+             "detail_count": 7,
+             "numericalArray": [
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 10
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 44
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 8
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 43
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 75
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 62
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 42
+                }
+             ]
+          }
+       },
+       {
+          "class": "middle",
+          "age": 2,
+          "min_position": 3,
+          "has_more_items": false,
+          "items_html": "Car",
+          "new_latent_count": 3,
+          "detail": {
+             "detail_title": "Bus",
+             "detail_nale": "Bus",
+             "detail_num": 7,
+             "detail_count": 9,
+             "numericalArray": [
+                {
+                   "chart_name": "Car",
+                   "chart_num": 26
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 10
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 42
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 13
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 62
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 22
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 81
+                }
+             ]
+          }
+       },
+       {
+          "class": "upper",
+          "age": 8,
+          "min_position": 3,
+          "has_more_items": true,
+          "items_html": "Bike",
+          "new_latent_count": 8,
+          "detail": {
+             "detail_title": "Car",
+             "detail_nale": "Bike",
+             "detail_num": 6,
+             "detail_count": 6,
+             "numericalArray": [
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 52
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 11
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 83
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 20
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 43
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 41
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 82
+                }
+             ]
+          }
+       },
+       {
+          "class": "upper",
+          "age": 5,
+          "min_position": 3,
+          "has_more_items": true,
+          "items_html": "Bus",
+          "new_latent_count": 8,
+          "detail": {
+             "detail_title": "Car",
+             "detail_nale": "Car",
+             "detail_num": 5,
+             "detail_count": 0,
+             "numericalArray": [
+                {
+                   "chart_name": "Car",
+                   "chart_num": 57
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 44
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 71
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 63
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 29
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 84
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 20
+                }
+             ]
+          }
+       },
+       {
+          "class": "middle",
+          "age": 1,
+          "min_position": 6,
+          "has_more_items": true,
+          "items_html": "Car",
+          "new_latent_count": 0,
+          "detail": {
+             "detail_title": "Bike",
+             "detail_nale": "Car",
+             "detail_num": 1,
+             "detail_count": 9,
+             "numericalArray": [
+                {
+                   "chart_name": "Car",
+                   "chart_num": 43
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 77
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 58
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 9
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 17
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 19
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 72
+                }
+             ]
+          }
+       },
+       {
+          "class": "upper",
+          "age": 7,
+          "min_position": 5,
+          "has_more_items": true,
+          "items_html": "Bike",
+          "new_latent_count": 1,
+          "detail": {
+             "detail_title": "Bike",
+             "detail_nale": "Bus",
+             "detail_num": 4,
+             "detail_count": 6,
+             "numericalArray": [
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 28
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 45
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 32
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 57
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 73
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 64
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 56
+                }
+             ]
+          }
+       },
+       {
+          "class": "lower",
+          "age": 3,
+          "min_position": 5,
+          "has_more_items": true,
+          "items_html": "Car",
+          "new_latent_count": 1,
+          "detail": {
+             "detail_title": "Bike",
+             "detail_nale": "Bus",
+             "detail_num": 2,
+             "detail_count": 8,
+             "numericalArray": [
+                {
+                   "chart_name": "Car",
+                   "chart_num": 82
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 68
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 17
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 24
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 5
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 18
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 45
+                }
+             ]
+          }
+       },
+       {
+          "class": "middle",
+          "age": 3,
+          "min_position": 4,
+          "has_more_items": false,
+          "items_html": "Bike",
+          "new_latent_count": 1,
+          "detail": {
+             "detail_title": "Car",
+             "detail_nale": "Bike",
+             "detail_num": 2,
+             "detail_count": 7,
+             "numericalArray": [
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 25
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 66
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 5
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 26
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 13
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 30
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 20
+                }
+             ]
+          }
+       },
+       {
+          "class": "lower",
+          "age": 2,
+          "min_position": 7,
+          "has_more_items": true,
+          "items_html": "Bus",
+          "new_latent_count": 3,
+          "detail": {
+             "detail_title": "Bike",
+             "detail_nale": "Car",
+             "detail_num": 0,
+             "detail_count": 5,
+             "numericalArray": [
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 29
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 83
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 47
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 48
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 17
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 31
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 34
+                }
+             ]
+          }
+       },
+       {
+          "class": "upper",
+          "age": 8,
+          "min_position": 3,
+          "has_more_items": false,
+          "items_html": "Bus",
+          "new_latent_count": 3,
+          "detail": {
+             "detail_title": "Bike",
+             "detail_nale": "Car",
+             "detail_num": 7,
+             "detail_count": 4,
+             "numericalArray": [
+                {
+                   "chart_name": "Car",
+                   "chart_num": 17
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 67
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 4
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 63
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 15
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 77
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 14
+                }
+             ]
+          }
+       },
+       {
+          "class": "middle",
+          "age": 5,
+          "min_position": 3,
+          "has_more_items": true,
+          "items_html": "Car",
+          "new_latent_count": 0,
+          "detail": {
+             "detail_title": "Car",
+             "detail_nale": "Bike",
+             "detail_num": 8,
+             "detail_count": 6,
+             "numericalArray": [
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 67
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 9
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 28
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 6
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 9
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 88
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 19
+                }
+             ]
+          }
+       },
+       {
+          "class": "lower",
+          "age": 8,
+          "min_position": 8,
+          "has_more_items": false,
+          "items_html": "Bike",
+          "new_latent_count": 5,
+          "detail": {
+             "detail_title": "Car",
+             "detail_nale": "Car",
+             "detail_num": 5,
+             "detail_count": 1,
+             "numericalArray": [
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 73
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 3
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 87
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 76
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 42
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 45
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 5
+                }
+             ]
+          }
+       },
+       {
+          "class": "upper",
+          "age": 8,
+          "min_position": 7,
+          "has_more_items": true,
+          "items_html": "Bus",
+          "new_latent_count": 5,
+          "detail": {
+             "detail_title": "Car",
+             "detail_nale": "Bus",
+             "detail_num": 3,
+             "detail_count": 7,
+             "numericalArray": [
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 21
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 67
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 25
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 74
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 28
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 39
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 19
+                }
+             ]
+          }
+       },
+       {
+          "class": "middle",
+          "age": 6,
+          "min_position": 7,
+          "has_more_items": true,
+          "items_html": "Bus",
+          "new_latent_count": 2,
+          "detail": {
+             "detail_title": "Bus",
+             "detail_nale": "Bus",
+             "detail_num": 5,
+             "detail_count": 6,
+             "numericalArray": [
+                {
+                   "chart_name": "Car",
+                   "chart_num": 53
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 46
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 42
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 55
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 83
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 82
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 52
+                }
+             ]
+          }
+       },
+       {
+          "class": "middle",
+          "age": 6,
+          "min_position": 5,
+          "has_more_items": false,
+          "items_html": "Bus",
+          "new_latent_count": 5,
+          "detail": {
+             "detail_title": "Car",
+             "detail_nale": "Car",
+             "detail_num": 8,
+             "detail_count": 8,
+             "numericalArray": [
+                {
+                   "chart_name": "Car",
+                   "chart_num": 13
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 50
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 30
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 78
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 33
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 66
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 88
+                }
+             ]
+          }
+       },
+       {
+          "class": "middle",
+          "age": 7,
+          "min_position": 4,
+          "has_more_items": true,
+          "items_html": "Car",
+          "new_latent_count": 5,
+          "detail": {
+             "detail_title": "Bus",
+             "detail_nale": "Car",
+             "detail_num": 7,
+             "detail_count": 8,
+             "numericalArray": [
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 77
+                },
+                {
+                   "chart_name": "Bus",
+                   "chart_num": 76
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 54
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 26
+                },
+                {
+                   "chart_name": "Car",
+                   "chart_num": 49
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 79
+                },
+                {
+                   "chart_name": "Bike",
+                   "chart_num": 58
+                }
+             ]
+          }
+       }
+    ]
+ }
