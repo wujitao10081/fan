@@ -13,7 +13,13 @@
                 <td>{{itemSeller.title}}</td>
                 <td>{{itemSeller.count}}</td>
                 <td>{{itemSeller.time | formatDate}}</td>
-                <td :style="{background:active}" ref="styleBack">{{itemSeller.level}}</td>
+                <td ref="refName">{{itemSeller.level}}</td>
+                <!-- <td 
+                    :class="{
+                        background1:itemSeller.level == 'low',
+                        background2:itemSeller.level == 'medium',
+                        background3:itemSeller.level == 'high'
+                }">{{itemSeller.level}}</td> -->
             </tr>
         </table>
     </div>
@@ -21,21 +27,12 @@
 
 <script>
 import moment from 'moment'
-// function changedate(shijianchuo) {
-//     var now = new Date(shijianchuo),
-//     y = now.getFullYear(),
-//     m = ("0" + (now.getMonth() + 1)).slice(-2),
-//     d = ("0" + now.getDate()).slice(-2);
-//     return y + "-" + m + "-" + d + " " + now.toTimeString().substr(0, 8);
-// }
-     
 export default {
     name:'list',
     data() {
         return {
            titleList:"",
            seller:'',
-           active:['red','blue','green']
 
         }
     },
@@ -48,30 +45,28 @@ export default {
         this.axios.get("/api/seller").then((res) => {
             console.log(res.data.data);  
             this.seller = res.data.data
-            
-
-
-
-
             this.seller.sort((a,b)=>{
                 return a.event_id-b.event_id
-            }) 
-        
-     } )     
+            })   
+     })     
         
  },  
+ 
     updated(){
-        for (let i = 0; i < this.seller.length; i++) {
-                console.log(this.seller[i].level);
-                console.log(this.$refs.styleBack);
-                if (this.seller[i].level === 'low') {
-                  this.$refs.styleBack.style = 'background:red'  
-                } else {
+        this.$nextTick(function(){
+                for (let i = 0; i < this.seller.length; i++) {
+                    console.log(this.seller[i].level);
+                    if (this.seller[i].level == 'low') {
+                        this.$refs.refName[i].style = "background:green"
+                    }else if (this.seller[i].level == 'medium') {
+                        this.$refs.refName[i].style = "background:blue"
+                    }else{
+                        this.$refs.refName[i].style = "background:red"
+                    }
                     
                 }
-                
-            }
-    },   
+            })
+    },
     filters:{    
       formatDate: function (x) {
         return moment(x*1000).format('YYYY-MM-DD')
@@ -88,7 +83,15 @@ export default {
         height: 250px;
         font-size: 12px;
         text-align: center;
-        border-collapse: collapse;
-        
+        border-collapse: collapse;  
     }
+    /* .background1{
+        background: green;
+    }
+    .background2{
+        background: blue;
+    }
+    .background3{
+        background: red;
+    } */
 </style>
