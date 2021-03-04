@@ -1,16 +1,16 @@
 <template>
     <div>
-        <table border="1">
+        <table border="1" >
             <tr>
                 <th>{{this.titleName.id}}</th>
-                <th>{{this.titleName.title}}</th>
+                <th ref="refName">{{this.titleName.title}}</th>
                 <th>{{this.titleName.num}}</th>
                 <th>{{this.titleName.time}}</th>
                 <th>{{this.titleName.level}}</th>
             </tr>
-            <tr v-for="(items,index) in sellerCon " :key="index" ref="refName">
+            <tr v-for="(items,index) in sellerCon " :key="index" >
                 <td>{{items.event_id}}</td>
-                <td>{{items.title}}</td>
+                <td ref="refName1">{{items.title}}</td>
                 <td>{{items.count}}</td>
                 <td>{{items.time}}</td>
                 <td>{{items.level}}</td>
@@ -49,11 +49,14 @@ export default {
         },
         btn2(){
             this.$nextTick(()=>{
-                for (let i = 0; i < this.sellerCon.length; i++) {
-                    console.log(this.sellerCon);
-                this.$refs.refName[1].style = 'background:red'
+              this.$refs.refName.style = 'background:red' 
+              for (let i = 0; i < this.sellerCon.length; i++) {
+                //   console.log(this.sellerCon[i].title);
+                 this.$refs.refName1[i].style = 'background:red' 
+              }
                 
-            }
+                
+            
             })
         }
     }
