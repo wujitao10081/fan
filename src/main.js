@@ -10,7 +10,6 @@ Vue.use(ElementUI);
 
 import axios from 'axios'   // 引入 axios 从 ‘axios’
 Vue.prototype.axios = axios  // 引入 axios 并绑定在vue的原型上 通过this.axios调用
-
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

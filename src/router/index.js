@@ -70,6 +70,12 @@ export default new Router({
       name:'list',
       component:()=> import('@/components/fan/list'),
 
-    }
+    },
+    {
+      path:'/listuser',
+      name:'listuser',
+      component:()=> import('@/components/fan/listuser'),
+
+    },
   ]
 })
