@@ -77,5 +77,11 @@ export default new Router({
       component:()=> import('@/components/fan/listuser'),
 
     },
+    {
+      path:'/chartList',
+      name:'chartList',
+      component:()=> import('@/components/fan/chartList'),
+
+    },
   ]
 })
