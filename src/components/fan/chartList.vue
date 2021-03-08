@@ -1,8 +1,8 @@
 <template>
     <div>
-        <table border="1">
+        <table border="1"  ref="refTab">
             <tr>
-                <th colspan="6">{{this.chartList.title}}</th>
+                <th colspan="9">{{this.chartList.title}}</th>
             </tr>
             <tr>
                 <th>年龄</th>
@@ -10,6 +10,8 @@
                 <th>年龄</th>
                 <th>年龄</th>
                 <th>年龄</th>
+                <th>详情</th>
+                <th>详情</th>
                 <th>详情</th>
             </tr>
             <tr v-for="(items,index) in chartListObj" :key="index">
@@ -19,8 +21,19 @@
                 <td> {{items.min_position}}</td>
                 <td> {{items.new_latent_count}}</td>
                 <td><button class="btn" @click="btn(items.detail.id)">详情</button></td>
+                <td><button class="del" @click="del(index)">删除</button></td>
+                <td><button class="mod" @click="mod">修改</button></td>
             </tr>
+            <tr><button @click="add" class="btnIpt">增加</button></tr>
         </table>
+        <div class="addIpt" ref="refIpt">
+            年龄<input type="text" v-model="ipt1"><br>
+            年龄<input type="text" v-model="ipt2"><br>
+            年龄<input type="text" v-model="ipt3"><br>
+            年龄<input type="text" v-model="ipt4"><br>
+            年龄<input type="text" v-model="ipt5"><br>
+            <button @click="sub">提交</button>
+        </div>
     </div>
 </template>
 
@@ -34,7 +47,13 @@ export default {
     data() {
         return {
             chartList:'',
-            chartListObj:''
+            chartListObj:'',
+            ipt1:'',
+            ipt2:'',
+            ipt3:'',
+            ipt4:'',
+            ipt5:'',
+            arrIpt:''
         }
     },
     mounted() {
@@ -53,7 +72,46 @@ export default {
                 }
             })
             
-        }
+        },
+        add(){
+            this.$nextTick(()=>{
+                this.$refs.refIpt.style = 'display:block'
+                this.$refs.refTab.style = 'opacity: .1;'
+            })
+        },
+        del(index){
+            this.chartListObj.splice(index,1)
+        },
+        mod(){
+            
+        },
+        sub(){
+            let obj = {}
+            let flag = this.ipt1 != ''&& this.ipt2 != '' && this.ipt3 != '' && this.ipt4 != '' && this.ipt5 != ''
+            // let flag = this.ipt1 == ''&& this.ipt2 =='' && this.ipt3 == '' && this.ipt4 == '' && this.ipt5 == ''
+            if (flag) {
+            obj.age = this.ipt1
+            obj.class = this.ipt2
+            obj.items_html = this.ipt3
+            obj.min_position = this.ipt4
+            obj.new_latent_count = this.ipt5
+            console.log(obj);
+            this.chartListObj.push(obj)
+
+            this.$nextTick(()=>{
+                this.$refs.refIpt.style = 'display:none'
+                this.$refs.refTab.style = 'opacity: 1;'
+                })     
+         }else{
+             alert('请输入')
+         }
+            this.ipt1 = '' 
+            this.ipt2 ='' 
+            this.ipt3 = '' 
+            this.ipt4 = ''  
+            this.ipt5 = '' 
+        },
+
     }
 }
 </script>
@@ -62,6 +120,7 @@ export default {
     table{
         text-align: center;
         width: 100%;
+        font-size: 10px;
     }
     .btn{
         border: none;
@@ -69,4 +128,16 @@ export default {
         background: none;
         outline: 0;
     }
+    .addIpt{
+        display: none;
+        height: 150px;
+        width: 300px;
+        background: #ccc;
+        position: fixed;
+        top: 100px;
+        left: 40px;
+    }
+    
+    
+   
 </style>
