@@ -6,6 +6,8 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
+require('../src/assets/mock')
+
 Vue.use(ElementUI);
 
 import axios from 'axios'   // 引入 axios 从 ‘axios’

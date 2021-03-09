@@ -83,12 +83,5 @@ export default new Router({
       component:()=> import('@/components/fan/chartList'),
 
     },
-    {
-      path:'/detail',
-      name:'detail',
-      component:()=> import('@/components/fan/detail'),
-
-    },
-    
   ]
 })

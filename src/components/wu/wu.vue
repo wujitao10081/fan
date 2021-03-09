@@ -1,29 +1,6 @@
 <template>
   <div class="wu">
-    <!-- 基础模板 data -->
-    <p>{{ name }}</p>
-    <el-divider></el-divider>
-
-    <!--  方法（事件） methods-->
-    <el-button @click="btn(10000)">btn</el-button>
-    <el-divider></el-divider>
-
-    <!--  计算属性 computed 可在模板里不加this直接使用-->
-    {{ gitNum }}
-    <el-divider></el-divider>
-
-    <!-- 监听器 watch -->
-    <el-button @click="watch">watch</el-button>
-    <el-divider></el-divider>
-
-    <!-- v-for -->
-    <!-- 想生成什么（例如生成li标签） 就在什么标签上添加v-for 必须有:key -->
-    <ul>
-      <li v-for="(item, index) in listArr" :key="index">
-        {{ item }}
-      </li>
-    </ul>
-
+    <button @click="btn">btn</button>
   </div>
 </template>
 
@@ -35,28 +12,64 @@ export default {
       name: "wu", //基础模板
       code: true, // watch
       listArr: ["html", "css", "javaScript", "vue", "element"],
-     
     };
   },
   mounted() {
-    var _this = this;
-    // console.log(this.name); // 通过this 直接读取data中的数据
-    // console.log(this.gitNum); // 不加（）直接读出计算属性的结果
-    // var t = new Date();
     this.axios({
-      url: "/api/chartList",// tableList
+      url: "/api/chartList", // tableList
       method: "get",
     }).then(function (data) {
-      console.log(data.data.data.objArray);
+      // console.log(data.data.data.objArray);
     });
+    // 回调函数案例
+    // var getNum = function(a){
+    //   console.log(100);
+    //   return 100 + a
+    // };
 
-   
+    // var da = function(getNum){
+    //   var a = 10
+    //   console.log( getNum(a));
+    // }
+    // da(getNum)
+
+    // onresize = function () {
+    //   console.log("resize");
+    // };
+    // onclick = function () {
+    //   console.log(10);
+    //   return 10;
+    // };
+
+    // console.log(document);
+    // window.location.reload()
+    // console.log(window.location);
+
+    // var a = function () {
+    //   var timeout = null;
+    //   return function () {
+    //     clearTimeout(timeout);
+    //     timeout = setTimeout(() => {
+    //       console.log(1);
+    //     }, 500);
+    //   };
+    // };
+
+    // document.onmousemove = a();
+    this.setNewsApi();
   },
   methods: {
- 
+    setNewsApi: function () {
+      this.axios({
+        url: "https://www.testList.com", // tableList
+        method: "get",
+      }).then(function (data) {
+        console.log(data.data.memberList);
+      });
+    },
     //方法（事件）
     btn(val) {
-      alert("点击事件" + val);
+      console.log(this);
     },
     // watch
     watch() {
