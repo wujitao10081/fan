@@ -22,7 +22,8 @@
                 <td> {{items.new_latent_count}}</td>
                 <td><button class="btn" @click="btn(items.detail.id)">详情</button></td>
                 <td><button class="del" @click="del(index)">删除</button></td>
-                <td><button class="mod" @click="mod">修改</button></td>
+                <td><button class="mod" @click="mod(items)">修改</button></td>
+                
             </tr>
             <tr><button @click="add" class="btnIpt">增加</button></tr>
         </table>
@@ -33,6 +34,15 @@
             年龄<input type="text" v-model="ipt4"><br>
             年龄<input type="text" v-model="ipt5"><br>
             <button @click="sub">提交</button>
+        </div>
+        <div class="modIpt">
+            年龄<input type="text" v-model="modIpt.age"><br>
+            年龄<input type="text" v-model="modIpt.class"><br>
+            年龄<input type="text" v-model="modIpt.items_html"><br>
+            年龄<input type="text" v-model="modIpt.min_position"><br>
+            年龄<input type="text" v-model="modIpt.new_latent_count"><br>
+            <button @click="upd">确认</button>
+            <button @click="cancel">取消</button>
         </div>
     </div>
 </template>
@@ -48,12 +58,15 @@ export default {
         return {
             chartList:'',
             chartListObj:'',
+            detailID:'',
             ipt1:'',
             ipt2:'',
             ipt3:'',
             ipt4:'',
             ipt5:'',
-            arrIpt:''
+            arrIpt:'',
+            modIpt:{}
+            
         }
     },
     mounted() {
@@ -82,20 +95,25 @@ export default {
         del(index){
             this.chartListObj.splice(index,1)
         },
-        mod(){
-            
-        },
+       
         sub(){
-            let obj = {}
+            let _id =Math.max (...this.chartListObj.map((item)=>{return item.detail.id}))+1
+            let obj = {
+                id:_id
+            }
+            
             let flag = this.ipt1 != ''&& this.ipt2 != '' && this.ipt3 != '' && this.ipt4 != '' && this.ipt5 != ''
             // let flag = this.ipt1 == ''&& this.ipt2 =='' && this.ipt3 == '' && this.ipt4 == '' && this.ipt5 == ''
+          
+        //     // console.log(_id);
+            
             if (flag) {
+                // console.log(_id);
             obj.age = this.ipt1
             obj.class = this.ipt2
             obj.items_html = this.ipt3
             obj.min_position = this.ipt4
             obj.new_latent_count = this.ipt5
-            console.log(obj);
             this.chartListObj.push(obj)
 
             this.$nextTick(()=>{
@@ -111,6 +129,29 @@ export default {
             this.ipt4 = ''  
             this.ipt5 = '' 
         },
+         mod(items){
+            //  console.log(items.detail.id);
+                this.modIpt = {
+                age:items.age,
+                class:items.class,
+                items_html:items.items_html,
+                min_position:items.min_position,
+                new_latent_count:items.new_latent_count,
+                id:items.detail.id
+            } 
+        },
+       upd(){
+            for (let i = 0; i < this.chartListObj.length; i++) {
+                 if (this.chartListObj[i].detail.id == this.modIpt.id) {
+                   this.modIpt = this.chartListObj[i]   
+            }
+                
+            } 
+        },
+        cancel(){
+            
+        }
+
 
     }
 }
