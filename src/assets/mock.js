@@ -45,7 +45,6 @@ Mock.mock('https://www.testList.com', 'get', {
                     {
                         "string": "@cword(5)",
                         aDs: '@city(true)',
-                        'iDp|+1': 1,
                         tXz: '@date(yyyy-MM-dd hh:mm:ss)', // 时间
                     }
                 ]

@@ -1,6 +1,29 @@
 <template>
   <div class="wu">
-    <button @click="btn">btn</button>
+    <!-- 新增 -->
+    <div>
+      <el-input size=" mini " v-model="iptAdd"></el-input>
+      <el-button type="primary" size="mini" @click="add()">新增</el-button>
+    </div>
+    <!-- 查找 -->
+    <div>
+      <el-input size=" mini " v-model.trim="iptFind"></el-input>
+      <el-button type="primary" size="mini" @click="find()">搜索</el-button>
+    </div>
+    <!-- 列表 -->
+    <ul>
+      <li v-for="(item, i) in list" :key="i">
+        <span> {{ item.address }}</span>
+        <span> {{ item.open }}</span>
+        <el-button size="mini" @click="btn(item)">修改</el-button>
+        <el-button size="mini" @click="del(item)">删除</el-button>
+      </li>
+    </ul>
+    <!-- 修改 -->
+    <div v-show="editTof" class="editForm">
+      <el-input size=" mini " v-model="ipt"></el-input>
+      <el-button size="mini" @click="edit">确定</el-button>
+    </div>
   </div>
 </template>
 
@@ -9,18 +32,15 @@ export default {
   name: "wu",
   data() {
     return {
-      name: "wu", //基础模板
-      code: true, // watch
-      listArr: ["html", "css", "javaScript", "vue", "element"],
+      list: [],
+      iptAdd: "",
+      editTof: false,
+      ipt: "",
+      address: "",
+      iptFind: "",
     };
   },
   mounted() {
-    this.axios({
-      url: "/api/chartList", // tableList
-      method: "get",
-    }).then(function (data) {
-      // console.log(data.data.data.objArray);
-    });
     // 回调函数案例
     // var getNum = function(a){
     //   console.log(100);
@@ -59,37 +79,71 @@ export default {
     this.setNewsApi();
   },
   methods: {
+    // 新增
+    add() {
+      var obj = {
+        address: this.iptAdd,
+      };
+      this.list.push(obj);
+    },
+    // 查找
+    find() {
+      var arr = [];
+      this.list.forEach((v, i) => {
+        if (v.address == this.iptFind) {
+          arr.push(v);
+        }
+      });
+
+      this.list = arr;
+    },
+    // 点击修改按钮
+    btn(v) {
+      this.editTof = true;
+      this.ipt = v.address;
+      this.id = v.id;
+    },
+    // 修改确定
+    edit() {
+      var code = "";
+      this.list.forEach((v, i) => {
+        if (v.id == this.id) {
+          code = i;
+        }
+      });
+      this.list[code] = {
+        address: this.ipt,
+      };
+      this.editTof = false;
+    },
+    // 删除
+    del(e) {
+      var code = "";
+      this.list.forEach((v, i) => {
+        if (e.id == v.id) {
+          code = i;
+        }
+      });
+      this.list.splice(code, 1);
+    },
+    // 列表
     setNewsApi: function () {
+      var _this = this;
       this.axios({
         url: "https://www.testList.com", // tableList
         method: "get",
       }).then(function (data) {
         console.log(data.data.memberList);
+        _this.list = data.data.memberList;
+        _this.listFind = data.data.memberList;
       });
-    },
-    //方法（事件）
-    btn(val) {
-      console.log(this);
-    },
-    // watch
-    watch() {
-      this.code = !this.code;
-    },
-  },
-  computed: {
-    //计算属性
-    gitNum() {
-      return 100;
-    },
-  },
-  watch: {
-    // code 对应 data中的code 传入两个值 一个改变之后的值（新值） 一个改变之前的值（旧值）
-    code: function (n, o) {
-      console.log(o, n);
     },
   },
 };
 </script>
 
 <style scoped>
+.wu >>> .el-input {
+  width: 30%;
+}
 </style>
