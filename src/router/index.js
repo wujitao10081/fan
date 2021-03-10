@@ -83,5 +83,17 @@ export default new Router({
       component:()=> import('@/components/fan/chartList'),
 
     },
+    {
+      path:'/testList',
+      name:'testList',
+      component:()=> import('@/components/fan/testList'),
+
+    },
+    {
+      path:'/testListDetail/:id',
+      name:'testListDetail',
+      component:()=> import('@/components/fan/testListDetail'),
+
+    },
   ]
 })
