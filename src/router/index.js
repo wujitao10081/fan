@@ -95,5 +95,11 @@ export default new Router({
       component:()=> import('@/components/fan/testListDetail'),
 
     },
+    {
+      path:'/personList',
+      name:'personList',
+      component:()=> import('@/components/fan/personList'),
+
+    },
   ]
 })
