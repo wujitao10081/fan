@@ -2,12 +2,12 @@
   <div class="wu">
     <!-- 新增 -->
     <div>
-      <el-input size=" mini " v-model="iptAdd"></el-input>
+      <el-input size="mini" v-model="iptAdd"></el-input>
       <el-button type="primary" size="mini" @click="add()">新增</el-button>
     </div>
     <!-- 查找 -->
     <div>
-      <el-input size=" mini " v-model.trim="iptFind"></el-input>
+      <el-input size="mini" v-model.trim="iptFind"></el-input>
       <el-button type="primary" size="mini" @click="find()">搜索</el-button>
     </div>
     <!-- 列表 -->
@@ -21,7 +21,7 @@
     </ul>
     <!-- 修改 -->
     <div v-show="editTof" class="editForm">
-      <el-input size=" mini " v-model="ipt"></el-input>
+      <el-input size="mini" v-model="ipt"></el-input>
       <el-button size="mini" @click="edit">确定</el-button>
     </div>
   </div>
