@@ -165,7 +165,7 @@ export default {
                 if (items.name.search(this.searchDat) != -1 ) {
                     arrNews.push(items)
                 }
-                
+                return arrNews
             })
             this.personData = arrNews
             this.searchDat =""
